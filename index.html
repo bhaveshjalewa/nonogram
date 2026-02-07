@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>National Nonogram</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>National Nonogram</h1>
+
+<!-- ================= START SCREEN ================= -->
+<div id="startScreen">
+
+    <div id="nameSection">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="playerName" placeholder="Enter your name">
+        <button onclick="startGame()">Start</button>
+    </div>
+
+    <div id="instructions">
+
+        <h3>How To Play</h3>
+        <ul>
+            <li>Each number represents consecutive filled (black) cells.</li>
+            <li>Multiple numbers mean separate groups.</li>
+            <li>There must be at least ONE blank cell between groups.</li>
+            <li>Left numbers → Row clues. Top numbers → Column clues.</li>
+        </ul>
+
+        <h3>Controls</h3>
+        <ul>
+            <li>Left Click → Fill (Black)</li>
+            <li>Right Click → X Mark</li>
+            <li>Undo → Revert last move</li>
+            <li>Clear Grid → Reset puzzle</li>
+        </ul>
+
+        <h3>Competition Rules</h3>
+        <ul>
+            <li>Timer starts when game begins.</li>
+            <li>Unlimited wrong attempts allowed.</li>
+            <li>After correct submission, board locks.</li>
+            <li>52-character secure completion code generated.</li>
+        </ul>
+
+    </div>
+</div>
+
+<!-- ================= GAME AREA ================= -->
+<div id="gameArea" style="display:none;">
+
+    <div id="timer">Time: 00:00</div>
+
+    <div id="game"></div>
+
+    <button onclick="submitPuzzle()">Submit</button>
+    <button onclick="undoMove()">Undo</button>
+    <button onclick="clearGrid()">Clear Grid</button>
+
+    <p id="resultMessage"></p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
